@@ -1,0 +1,21 @@
+name: "Hello Actions"
+description: "Greet someone"
+author: "octocat@github.com"
+
+inputs:
+  # I'm confused in this part
+  # the name of variable it should be INPUT_MY_NAME
+  # ref: entrypoint.sh => $INPUT_MY_NAME
+  MY_NAME:
+    description: "Who to greet"
+    required: true
+    default: "world"
+    
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+branding:
+  icon: "mic"
+  color: "purple"
+  
